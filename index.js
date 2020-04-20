@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import ReactDom from 'react-dom';
 import './main.css';
+
 // Create the app
 const App = () => {
 
@@ -45,9 +46,9 @@ const App = () => {
               </form>
             </div>
             <div className="rightContent">
-              <div>
-                <div style={linkImageStyle}/>
-                <div><h2><a href="#"></a></h2></div>
+              <div className="linkCard">
+                <div className="linkCardImage" style={linkImageStyle}/>
+                <div className="linkCardLink"><h2><a href="#"></a>My Link</h2></div>
               </div>
             </div>
           </main>

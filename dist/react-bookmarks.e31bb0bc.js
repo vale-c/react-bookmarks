@@ -28410,11 +28410,16 @@ var App = function App() {
     placeholder: "https://example.com"
   })), /*#__PURE__*/_react.default.createElement("button", null, "Add"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "rightContent"
-  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardImage",
     style: linkImageStyle
-  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardLink"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
     href: "#"
-  })))))));
+  }), "My Link"))))));
 };
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('app'));
