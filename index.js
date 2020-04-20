@@ -1,5 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import ReactDom from 'react-dom';
+import LinkCard from './components/LinkCard';
+
 import './main.css';
 
 // Create the app
@@ -7,8 +9,11 @@ const App = () => {
   const [cardData, setCardData] = useState([{ linkName: 'my link', linkHref: 'https://github.com'}]);
   const [newCard, setNewCard] = useState({linkName: '', linkHref: ''});
 
-  const linkImageStyle = {
-    backgroundImage: 'url(\'https://image.flaticon.com/icons/svg/1160/1160462.svg\')'
+  const dispatchCardSet = (payload) => {
+    let oldArray = cardData;
+    let newArray = [...oldArray, payload];
+    setCardData(newArray);
+    setNewCard({linkHref: '', linkName: ''});
   }
 
   return (
@@ -52,34 +57,11 @@ const App = () => {
                       placeholder="https://example.com"
                     />
                 </div>
-                <button>Add</button>
+                <button onClick={() => dispatchCardSet(newCard)}>Add</button>
               </form>
             </div>
             <div className="rightContent">
-              <div className="linkCard">
-                <div className="linkCardImage" style={linkImageStyle}/>
-                <div className="linkCardLink"><h2><a href="#">My Link</a></h2></div>
-              </div>
-              <div className="linkCard">
-                <div className="linkCardImage" style={linkImageStyle}/>
-                <div className="linkCardLink"><h2><a href="#">My Link</a></h2></div>
-              </div>
-              <div className="linkCard">
-                <div className="linkCardImage" style={linkImageStyle}/>
-                <div className="linkCardLink"><h2><a href="#">My Link</a></h2></div>
-              </div>
-              <div className="linkCard">
-                <div className="linkCardImage" style={linkImageStyle}/>
-                <div className="linkCardLink"><h2><a href="#">My Link</a></h2></div>
-              </div>
-              <div className="linkCard">
-                <div className="linkCardImage" style={linkImageStyle}/>
-                <div className="linkCardLink"><h2><a href="#">My Link</a></h2></div>
-              </div>
-              <div className="linkCard">
-                <div className="linkCardImage" style={linkImageStyle}/>
-                <div className="linkCardLink"><h2><a href="#">My Link</a></h2></div>
-              </div>
+              <LinkCard cards={cardData}/>
             </div>
           </main>
     </Fragment>

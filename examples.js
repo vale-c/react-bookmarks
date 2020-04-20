@@ -22,6 +22,8 @@
 // }
 
 
+//Destructuring Array Concept
+
 const myArray = [1,2,3];
 
 const [one, two, three] = myArray;

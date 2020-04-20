@@ -28285,7 +28285,43 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"components/LinkCard.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var LinkCard = function LinkCard(props) {
+  var linkImageStyle = {
+    backgroundImage: 'url(\'https://image.flaticon.com/icons/svg/1160/1160462.svg\')'
+  };
+  var mappedData = props.cards.map(function (card, i) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: i,
+      className: "linkCard"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "linkCardImage",
+      style: linkImageStyle
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      className: "linkCardLink"
+    }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
+      href: card.linkHref
+    }, card.linkName))));
+  });
+  return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, mappedData);
+};
+
+var _default = LinkCard;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -28364,6 +28400,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
+var _LinkCard = _interopRequireDefault(require("./components/LinkCard"));
+
 require("./main.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -28377,6 +28415,14 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -28408,9 +28454,16 @@ var App = function App() {
       newCard = _useState4[0],
       setNewCard = _useState4[1];
 
-  var linkImageStyle = {
-    backgroundImage: 'url(\'https://image.flaticon.com/icons/svg/1160/1160462.svg\')'
+  var dispatchCardSet = function dispatchCardSet(payload) {
+    var oldArray = cardData;
+    var newArray = [].concat(_toConsumableArray(oldArray), [payload]);
+    setCardData(newArray);
+    setNewCard({
+      linkHref: '',
+      linkName: ''
+    });
   };
+
   return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, /*#__PURE__*/_react.default.createElement("nav", {
     className: "navigation"
   }, /*#__PURE__*/_react.default.createElement("a", null, /*#__PURE__*/_react.default.createElement("img", {
@@ -28458,67 +28511,19 @@ var App = function App() {
     minLength: "7",
     maxLength: "25",
     placeholder: "https://example.com"
-  })), /*#__PURE__*/_react.default.createElement("button", null, "Add"))), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("button", {
+    onClick: function onClick() {
+      return dispatchCardSet(newCard);
+    }
+  }, "Add"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "rightContent"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardImage",
-    style: linkImageStyle
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardLink"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#"
-  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardImage",
-    style: linkImageStyle
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardLink"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#"
-  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardImage",
-    style: linkImageStyle
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardLink"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#"
-  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardImage",
-    style: linkImageStyle
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardLink"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#"
-  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardImage",
-    style: linkImageStyle
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardLink"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#"
-  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardImage",
-    style: linkImageStyle
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "linkCardLink"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#"
-  }, "My Link")))))));
+  }, /*#__PURE__*/_react.default.createElement(_LinkCard.default, {
+    cards: cardData
+  }))));
 };
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('app'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./main.css":"main.css"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./components/LinkCard":"components/LinkCard.js","./main.css":"main.css"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
