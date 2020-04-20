@@ -107,6 +107,7 @@ main {
   align-items: center;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  flex-shrink: 0;
 }
 
 .rightContent .linkCard .linkCardImage {
@@ -114,4 +115,9 @@ main {
   background-position: center;
   height: 100px;
   width: 100px;
+}
+
+.rightContent .linkCardLink a {
+  color: white;
+  margin-left: 10px;
 }

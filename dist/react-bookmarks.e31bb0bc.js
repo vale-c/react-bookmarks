@@ -28419,7 +28419,52 @@ var App = function App() {
     className: "linkCardLink"
   }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
     href: "#"
-  }), "My Link"))))));
+  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardImage",
+    style: linkImageStyle
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardLink"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardImage",
+    style: linkImageStyle
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardLink"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardImage",
+    style: linkImageStyle
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardLink"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardImage",
+    style: linkImageStyle
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardLink"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "My Link")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardImage",
+    style: linkImageStyle
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "linkCardLink"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "My Link")))))));
 };
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('app'));
