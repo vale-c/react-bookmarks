@@ -3,7 +3,7 @@ import React, {Fragment} from 'react';
 const LinkCard = props => {
 
   const linkImageStyle = {
-    backgroundImage: 'url(\'https://image.flaticon.com/icons/svg/1160/1160462.svg\')'
+    backgroundImage: 'url(\'https://image.flaticon.com/icons/svg/2806/2806728.svg\')'
   }
 
   const mappedData = props.cards.map((card, i) => {

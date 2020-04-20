@@ -19,14 +19,14 @@ const App = () => {
   return (
     <Fragment>
         <nav className="navigation">
-          <a><img height="40px" src="https://image.flaticon.com/icons/svg/1160/1160462.svg" alt=""/></a>
+          <a><img height="40px" src="https://image.flaticon.com/icons/svg/2806/2806728.svg" alt=""/></a>
           <ul>
             <li>Home</li>
           </ul>
           </nav>
           <main>
             <div className="leftContent">
-              <img src="https://image.flaticon.com/icons/svg/1160/1160462.svg" alt=""/>
+              <img src="https://image.flaticon.com/icons/svg/2806/2806728.svg" alt=""/>
               <form onSubmit={e => e.preventDefault()}>
                 <h2 className="formTitle">Add a bookmark</h2>
                 <div>

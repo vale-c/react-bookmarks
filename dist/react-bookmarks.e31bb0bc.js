@@ -28301,7 +28301,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var LinkCard = function LinkCard(props) {
   var linkImageStyle = {
-    backgroundImage: 'url(\'https://image.flaticon.com/icons/svg/1160/1160462.svg\')'
+    backgroundImage: 'url(\'https://image.flaticon.com/icons/svg/2806/2806728.svg\')'
   };
   var mappedData = props.cards.map(function (card, i) {
     return /*#__PURE__*/_react.default.createElement("div", {
@@ -28468,12 +28468,12 @@ var App = function App() {
     className: "navigation"
   }, /*#__PURE__*/_react.default.createElement("a", null, /*#__PURE__*/_react.default.createElement("img", {
     height: "40px",
-    src: "https://image.flaticon.com/icons/svg/1160/1160462.svg",
+    src: "https://image.flaticon.com/icons/svg/2806/2806728.svg",
     alt: ""
   })), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Home"))), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "leftContent"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: "https://image.flaticon.com/icons/svg/1160/1160462.svg",
+    src: "https://image.flaticon.com/icons/svg/2806/2806728.svg",
     alt: ""
   }), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: function onSubmit(e) {

@@ -46,6 +46,7 @@ main {
 }
 
 .leftContent img {
+  margin-top: 10%;
   width: 40%;
 }
 
@@ -85,12 +86,12 @@ main {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background: #61dafb;
+  background: #2DDF84;
   color: black;
 }
 
 .rightContent {
-  background: #61dafb;
+  background: #2DDF84;
   height: calc(100vh - 56px);
   flex-basis: 50%;
   display: flex;
