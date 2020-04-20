@@ -1,9 +1,11 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import ReactDom from 'react-dom';
 import './main.css';
 
 // Create the app
 const App = () => {
+  const [cardData, setCardData] = useState([{ linkName: 'my link', linkHref: 'https://github.com'}]);
+  const [newCard, setNewCard] = useState({linkName: '', linkHref: ''});
 
   const linkImageStyle = {
     backgroundImage: 'url(\'https://image.flaticon.com/icons/svg/1160/1160462.svg\')'
@@ -20,11 +22,15 @@ const App = () => {
           <main>
             <div className="leftContent">
               <img src="https://image.flaticon.com/icons/svg/1160/1160462.svg" alt=""/>
-              <form>
+              <form onSubmit={e => e.preventDefault()}>
                 <h2 className="formTitle">Add a bookmark</h2>
                 <div>
-                  <label htmlFor="linkTitle" className="formLabel">Enter a bookmark name</label>
+                  <label 
+                    htmlFor="linkTitle"
+                    className="formLabel">Enter a bookmark name</label>
                   <input 
+                    value={newCard.linkName}
+                    onChange={e => setNewCard({...newCard, linkName: e.currentTarget.value})}
                     type="text" 
                     name="linkTitle"
                     minLength="1"
@@ -33,10 +39,14 @@ const App = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="linkHref" className="formLabel">Enter a bookmark name</label>
-                    <input 
+                  <label
+                    htmlFor="linkHref3"
+                    className="formLabel">Enter a bookmark name</label>
+                    <input
+                      value={newCard.linkHref}
+                      onChange={e => setNewCard({...newCard, linkHref: e.currentTarget.value})}
                       type="text" 
-                      name="linkHref"
+                      name="linkHref3"
                       minLength="7"
                       maxLength="25"
                       placeholder="https://example.com"
