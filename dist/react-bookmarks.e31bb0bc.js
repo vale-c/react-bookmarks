@@ -28468,7 +28468,9 @@ var App = function App() {
     alt: ""
   })), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Home"))), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "leftContent"
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "bookmarkTitle"
+  }, "Bookmark Manager"), /*#__PURE__*/_react.default.createElement("img", {
     src: "https://image.flaticon.com/icons/svg/148/148993.svg",
     alt: ""
   }), /*#__PURE__*/_react.default.createElement("form", {

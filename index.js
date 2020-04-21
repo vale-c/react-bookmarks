@@ -26,6 +26,7 @@ const App = () => {
           </nav>
           <main>
             <div className="leftContent">
+              <h1 className="bookmarkTitle">Bookmark Manager</h1>
               <img src="https://image.flaticon.com/icons/svg/148/148993.svg" alt=""/>
               <form onSubmit={e => e.preventDefault()}>
                 <h2 className="formTitle">Add a bookmark</h2>
