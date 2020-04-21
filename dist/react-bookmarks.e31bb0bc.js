@@ -28300,16 +28300,12 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var LinkCard = function LinkCard(props) {
-  var linkImageStyle = {
-    backgroundImage: 'url(\'https://image.flaticon.com/icons/svg/2806/2806728.svg\')'
-  };
   var mappedData = props.cards.map(function (card, i) {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: i,
       className: "linkCard"
     }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "linkCardImage",
-      style: linkImageStyle
+      className: "linkCardImage"
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "linkCardLink"
     }, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("a", {
@@ -28468,12 +28464,12 @@ var App = function App() {
     className: "navigation"
   }, /*#__PURE__*/_react.default.createElement("a", null, /*#__PURE__*/_react.default.createElement("img", {
     height: "40px",
-    src: "https://image.flaticon.com/icons/svg/2806/2806728.svg",
+    src: "https://image.flaticon.com/icons/svg/2467/2467750.svg",
     alt: ""
   })), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Home"))), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "leftContent"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: "https://image.flaticon.com/icons/svg/2806/2806728.svg",
+    src: "https://image.flaticon.com/icons/svg/148/148993.svg",
     alt: ""
   }), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: function onSubmit(e) {
@@ -28551,7 +28547,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55654" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56422" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

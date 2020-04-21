@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@531&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.2rem;
 }
 
 .navigation {
@@ -24,6 +27,7 @@ body {
 
 .navigation ul li:hover {
   cursor: pointer;
+  color: #2DDF84;
 }
 
 .navigation a {
@@ -60,7 +64,7 @@ main {
   height: 200px;
   margin: 50px auto 0 auto;
   background: #333;
-  padding: 1.5em;
+  padding: 2.5em;
 }
 
 .leftContent form div {
@@ -73,8 +77,12 @@ main {
   color: white;
 }
 
+.formLabel {
+  margin: 10px 0 !important;
+}
+
 .leftContent form input {
-  padding: 5px;
+  padding: 10px;
   border-radius:  5px;
   border: none;
   margin-top: 0.2em;
@@ -82,16 +90,16 @@ main {
 
 .leftContent form button {
   margin-top: 1em;
-  padding: 5px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background: #2DDF84;
+  background: #C0392B;
   color: black;
 }
 
 .rightContent {
-  background: #2DDF84;
+  background: #C0392B;
   height: calc(100vh - 56px);
   flex-basis: 50%;
   display: flex;
@@ -109,13 +117,6 @@ main {
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
   flex-shrink: 0;
-}
-
-.rightContent .linkCard .linkCardImage {
-  background-size: cover;
-  background-position: center;
-  height: 100px;
-  width: 100px;
 }
 
 .rightContent .linkCardLink a {
